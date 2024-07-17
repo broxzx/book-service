@@ -1,0 +1,18 @@
+server:
+  port: 8088
+
+  servlet:
+    context-path: /api/v1
+
+spring:
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 50MB
+
+  application:
+    name: book-social-network
+
+springdoc:
+  default-produces-media-type: application/json
