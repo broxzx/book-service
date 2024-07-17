@@ -88,4 +88,9 @@ public class UserService implements UserDetailsService {
     public void setAuthenticationManager(@Lazy AuthenticationManager authenticationManager) {
         this.authenticationManager = authenticationManager;
     }
+
+    public User getUserByEmail(String email) {
+        return userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("user with email '%s' not found".formatted(email)));
+    }
 }

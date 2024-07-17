@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bda040f6-de5c-40ef-b570-dd5e48dfc6e8" name="Changes" comment="verification email for user">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/data/dto/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="bda040f6-de5c-40ef-b570-dd5e48dfc6e8" name="Changes" comment="book entity">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/books/data/dto/BookRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/books/services/BookRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/books/services/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/booktransaction/data/BookTransactionHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/books/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/books/BookController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/config/BeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/config/BeanConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/feedback/FeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/feedback/FeedbackController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/utils/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/utils/JwtUtils.java" afterDir="false" />
     </list>
@@ -86,7 +88,7 @@
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.BookSocialNetworkApplication.executor": "Debug",
+    "Spring Boot.BookSocialNetworkApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/fyuizee/IdeaProjects/book-social-network/frontend",
@@ -189,7 +191,7 @@
       <option name="presentableId" value="Default" />
       <updated>1721127541249</updated>
       <workItem from="1721127542419" duration="5157000" />
-      <workItem from="1721200802583" duration="5663000" />
+      <workItem from="1721200802583" duration="7809000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -231,7 +233,23 @@
       <option name="project" value="LOCAL" />
       <updated>1721244744502</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="logging user">
+      <option name="closed" value="true" />
+      <created>1721246222965</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1721246222965</updated>
+    </task>
+    <task id="LOCAL-00007" summary="book entity">
+      <option name="closed" value="true" />
+      <created>1721247361745</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1721247361745</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +261,9 @@
     <MESSAGE value="fixed registration for user" />
     <MESSAGE value="added roles for user" />
     <MESSAGE value="verification email for user" />
-    <option name="LAST_COMMIT_MESSAGE" value="verification email for user" />
+    <MESSAGE value="logging user" />
+    <MESSAGE value="book entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="book entity" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -252,15 +272,6 @@
           <url>file://$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/services/UserService.java</url>
           <line>41</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/UserController.java</url>
-          <line>18</line>
-          <properties class="com.project.booksocialnetwork.users.UserController" method="register">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
