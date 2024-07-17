@@ -1,6 +1,7 @@
 package com.project.booksocialnetwork.users.data;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.project.booksocialnetwork.users.data.enums.UserRoles;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,7 +16,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.security.Principal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -38,9 +38,11 @@ public class User implements UserDetails, Principal {
 
     private String password;
 
-    private boolean accountLocked;
+    @Builder.Default
+    private boolean accountLocked = false;
 
-    private boolean enabled;
+    @Builder.Default
+    private boolean enabled = true;
 
     @CreatedDate
     private LocalDateTime createdAt;
@@ -50,8 +52,7 @@ public class User implements UserDetails, Principal {
 
     @Builder.Default
     @JsonIgnore
-    private List<String> roles = new ArrayList<>();
-
+    private List<String> roles = List.of(UserRoles.ROLE_USER.name());
 
 
     @Override
