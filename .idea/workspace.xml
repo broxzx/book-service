@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bda040f6-de5c-40ef-b570-dd5e48dfc6e8" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/data/dto/RegistrationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/config/BeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/config/BeanConfig.java" afterDir="false" />
+    <list default="true" id="bda040f6-de5c-40ef-b570-dd5e48dfc6e8" name="Changes" comment="registration end point for user">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e91bfa8b-11f7-4aae-8111-f8f9a25da00b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e91bfa8b-11f7-4aae-8111-f8f9a25da00b.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/services/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/data/dto/RegistrationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/data/dto/RegistrationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/utils/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/utils/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,8 +82,12 @@
     "Docker.backend.mail-server: Compose Deployment.executor": "Run",
     "Docker.backend.mongodb-book-social-network: Compose Deployment.executor": "Run",
     "Docker.backend: Compose Deployment.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.BookSocialNetworkApplication.executor": "Run",
+    "Spring Boot.BookSocialNetworkApplication.executor": "Debug",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/fyuizee/IdeaProjects/book-social-network/frontend",
@@ -177,7 +185,7 @@
       <option name="presentableId" value="Default" />
       <updated>1721127541249</updated>
       <workItem from="1721127542419" duration="5157000" />
-      <workItem from="1721200802583" duration="2120000" />
+      <workItem from="1721200802583" duration="2754000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -187,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721241331082</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="registration end point for user">
+      <option name="closed" value="true" />
+      <created>1721242611432</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1721242611432</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +211,36 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="registration end point for user" />
+    <option name="LAST_COMMIT_MESSAGE" value="registration end point for user" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/services/UserService.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/UserController.java</url>
+          <line>19</line>
+          <properties class="com.project.booksocialnetwork.users.UserController" method="register">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/utils/JwtAuthenticationFilter.java</url>
+          <line>27</line>
+          <properties class="com.project.booksocialnetwork.utils.JwtAuthenticationFilter" method="doFilterInternal">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

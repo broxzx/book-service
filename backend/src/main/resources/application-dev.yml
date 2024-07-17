@@ -23,3 +23,10 @@ spring:
 jwt:
   secretKey: 69f71e0d72868dc230c984f19d4330b59aecab6f8f98b58ec60cd58205275345
   expiresIn: 5h
+
+logging:
+  level:
+    org.springframework.security.web.FilterChainProxy: DEBUG
+    org.springframework.security.web.access.intercept.FilterSecurityInterceptor: DEBUG
+    org.springframework.security.access.vote.AffirmativeBased: DEBUG
+    org.springframework.security.access.vote.AuthenticatedVoter: DEBUG

@@ -28,7 +28,7 @@ public class UserService implements UserDetailsService {
                 .orElseThrow(() -> new RuntimeException("user with email '%s' is not found".formatted(email)));
     }
 
-    public void registerUser(RegistrationRequest registrationRequest) {
+    public String registerUser(RegistrationRequest registrationRequest) {
 
         User registeredUser = User.builder()
                 .email(registrationRequest.getEmail())
@@ -38,9 +38,7 @@ public class UserService implements UserDetailsService {
                 .build();
 
         userRepository.save(registeredUser);
-        String token = jwtUtils.generateToken(registeredUser);
-
-        log.info("{}", token);
+        return jwtUtils.generateToken(registeredUser);
     }
 
     @Autowired
