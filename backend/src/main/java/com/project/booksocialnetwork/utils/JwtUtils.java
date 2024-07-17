@@ -26,7 +26,7 @@ public class JwtUtils {
     private String secretKey;
 
 
-    private Claims getAllClaimsFromToken(String token) {
+    public Claims getAllClaimsFromToken(String token) {
         return Jwts
                 .parser()
                 .verifyWith(getSecretKey())
@@ -47,6 +47,16 @@ public class JwtUtils {
         return Jwts.builder()
                 .claims(claims)
                 .subject(userDetails.getUsername())
+                .issuedAt(new Date())
+                .expiration(new Date(new Date().getTime() + expiresIn.toMillis()))
+                .signWith(getSecretKey())
+                .compact();
+    }
+
+    public String generateValidateEmailToken(String email) {
+        return Jwts.builder()
+                .claims(Map.of("verification-email", true))
+                .subject(email)
                 .issuedAt(new Date())
                 .expiration(new Date(new Date().getTime() + expiresIn.toMillis()))
                 .signWith(getSecretKey())

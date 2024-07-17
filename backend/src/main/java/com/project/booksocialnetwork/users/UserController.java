@@ -5,10 +5,7 @@ import com.project.booksocialnetwork.users.services.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/users")
@@ -20,5 +17,10 @@ public class UserController {
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody @Valid RegistrationRequest registrationRequest) {
         return ResponseEntity.ok(userService.registerUser(registrationRequest));
+    }
+
+    @GetMapping("/verify")
+    public void verifyEmail(@RequestParam String token) {
+        userService.verifyEmail(token);
     }
 }

@@ -7,7 +7,7 @@
       <secret-storage>master_key</secret-storage>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" negative="1" />
+          <node kind="schema" qname="book-social-network" />
         </introspection-scope>
       </schema-mapping>
     </data-source>
