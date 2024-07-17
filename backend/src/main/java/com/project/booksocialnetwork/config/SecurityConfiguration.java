@@ -25,7 +25,7 @@ public class SecurityConfiguration {
                 .cors(Customizer.withDefaults())
                 .authorizeHttpRequests(authorizeHttpRequests -> authorizeHttpRequests
                         .requestMatchers("/auth/**", "/v2/**", "/v3/**", "/swagger-resources", "/swagger-resources/**",
-                                "/configuration/**", "/swagger-ui/**", "/webjars/**", "swagger-ui.html", "/users/register", "users/verify"
+                                "/configuration/**", "/swagger-ui/**", "/webjars/**", "swagger-ui.html", "/users/register", "/users/verify", "/users/login"
                         ).permitAll()
                         .anyRequest().authenticated()
                 )

@@ -42,7 +42,7 @@ public class User implements UserDetails, Principal {
     private boolean accountLocked = false;
 
     @Builder.Default
-    private boolean enabled = true;
+    private boolean enabled = false;
 
     @CreatedDate
     private LocalDateTime createdAt;

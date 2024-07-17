@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bda040f6-de5c-40ef-b570-dd5e48dfc6e8" name="Changes" comment="added roles for user">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/utils/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="bda040f6-de5c-40ef-b570-dd5e48dfc6e8" name="Changes" comment="verification email for user">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/data/dto/LoginRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/config/BeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/config/BeanConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/config/SecurityConfiguration.java" afterDir="false" />
@@ -87,7 +86,7 @@
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.BookSocialNetworkApplication.executor": "Run",
+    "Spring Boot.BookSocialNetworkApplication.executor": "Debug",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/fyuizee/IdeaProjects/book-social-network/frontend",
@@ -190,7 +189,7 @@
       <option name="presentableId" value="Default" />
       <updated>1721127541249</updated>
       <workItem from="1721127542419" duration="5157000" />
-      <workItem from="1721200802583" duration="4460000" />
+      <workItem from="1721200802583" duration="5663000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -224,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721243355548</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="verification email for user">
+      <option name="closed" value="true" />
+      <created>1721244744502</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1721244744502</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,19 +242,20 @@
     <MESSAGE value="registration end point for user" />
     <MESSAGE value="fixed registration for user" />
     <MESSAGE value="added roles for user" />
-    <option name="LAST_COMMIT_MESSAGE" value="added roles for user" />
+    <MESSAGE value="verification email for user" />
+    <option name="LAST_COMMIT_MESSAGE" value="verification email for user" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/services/UserService.java</url>
-          <line>35</line>
+          <line>41</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/UserController.java</url>
-          <line>17</line>
+          <line>18</line>
           <properties class="com.project.booksocialnetwork.users.UserController" method="register">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
