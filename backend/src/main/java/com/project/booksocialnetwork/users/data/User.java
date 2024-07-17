@@ -45,10 +45,12 @@ public class User implements UserDetails, Principal {
     private boolean enabled = false;
 
     @CreatedDate
-    private LocalDateTime createdAt;
+    @Builder.Default
+    private LocalDateTime createdAt = LocalDateTime.now();
 
     @LastModifiedDate
-    private LocalDateTime lastModifiedAt;
+    @Builder.Default
+    private LocalDateTime lastModifiedAt = LocalDateTime.now();
 
     @Builder.Default
     @JsonIgnore
@@ -91,9 +93,5 @@ public class User implements UserDetails, Principal {
     @Override
     public String getName() {
         return email;
-    }
-
-    public String getFullName() {
-        return firstName + " " + lastName;
     }
 }
