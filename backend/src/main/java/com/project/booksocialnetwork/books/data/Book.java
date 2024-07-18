@@ -33,6 +33,8 @@ public class Book {
     @Builder.Default
     private boolean shareable = false;
 
+    private double rate;
+
     @Builder.Default
     private LocalDateTime createdDate = LocalDateTime.now();
 

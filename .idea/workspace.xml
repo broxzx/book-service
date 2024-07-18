@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bda040f6-de5c-40ef-b570-dd5e48dfc6e8" name="Changes" comment="book entity">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/books/data/dto/BookRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/books/services/BookRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/books/services/BookService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/booktransaction/data/BookTransactionHistory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/common/PageResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/books/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/books/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/config/BeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/config/BeanConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/feedback/FeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/feedback/FeedbackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/utils/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/utils/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/books/data/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/books/data/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/books/services/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/books/services/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/books/services/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/books/services/BookService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,6 +189,7 @@
       <updated>1721127541249</updated>
       <workItem from="1721127542419" duration="5157000" />
       <workItem from="1721200802583" duration="7809000" />
+      <workItem from="1721284260233" duration="3605000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -272,6 +270,11 @@
           <url>file://$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/users/services/UserService.java</url>
           <line>41</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/com/project/booksocialnetwork/books/services/BookService.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
