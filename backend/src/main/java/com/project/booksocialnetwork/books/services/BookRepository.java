@@ -6,6 +6,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
+import java.util.List;
+
 public interface BookRepository extends MongoRepository<Book, String> {
 
     @Query("{ $and: [ {archived: false}, {shareable:  true}  ] }")
@@ -13,4 +15,6 @@ public interface BookRepository extends MongoRepository<Book, String> {
 
     @Query("{ $and: [ {archived: false}, {shareable:  true}, {ownerId: ?0}  ] }")
     Page<Book> getAllOwnerBooks(Pageable pageable, String ownerId);
+
+    Page<Book> findByIdIn(Pageable pageable, List<String> ids);
 }

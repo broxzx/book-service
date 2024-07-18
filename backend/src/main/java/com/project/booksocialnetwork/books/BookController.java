@@ -43,4 +43,13 @@ public class BookController {
         return ResponseEntity.ok(bookService.getAllOwnerBooks(page, size, authorizationHeader));
     }
 
+    @GetMapping("/getBorrowedBooks")
+    public ResponseEntity<Page<Book>> getAllBorrowedBooks(
+            @RequestParam(required = false, defaultValue = "0") int page,
+            @RequestParam(required = false, defaultValue = "10") int size,
+            @RequestHeader(HttpHeaders.AUTHORIZATION) String authorizationHeader
+    ) {
+        return ResponseEntity.ok(bookService.getAllBorrowedBooks(page, size, authorizationHeader));
+    }
+
 }

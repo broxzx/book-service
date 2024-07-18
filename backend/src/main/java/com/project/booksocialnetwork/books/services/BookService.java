@@ -2,6 +2,8 @@ package com.project.booksocialnetwork.books.services;
 
 import com.project.booksocialnetwork.books.data.Book;
 import com.project.booksocialnetwork.books.data.dto.BookRequest;
+import com.project.booksocialnetwork.booktransaction.data.BookTransactionHistory;
+import com.project.booksocialnetwork.booktransaction.services.BookTransactionHistoryRepository;
 import com.project.booksocialnetwork.users.data.User;
 import com.project.booksocialnetwork.users.services.UserService;
 import com.project.booksocialnetwork.utils.JwtUtils;
@@ -13,6 +15,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class BookService {
@@ -21,6 +25,7 @@ public class BookService {
     private final UserService userService;
     private final JwtUtils jwtUtils;
     private final ModelMapper modelMapper;
+    private final BookTransactionHistoryRepository transactionHistoryRepository;
 
 
     public Book saveBookToUser(BookRequest bookRequest, String authorizationHeader) {
@@ -53,5 +58,19 @@ public class BookService {
         Pageable pageable = PageRequest.of(page, size, Sort.by("createdDate").descending());
 
         return bookRepository.getAllOwnerBooks(pageable, obtainedUser.getId());
+    }
+
+    public Page<Book> getAllBorrowedBooks(int page, int size, String authorizationHeader) {
+        User obtainedUser = userService.getUserByEmail(jwtUtils.getEmailFromJwtToken(jwtUtils.extractTokenFromAuthorizationHeader(authorizationHeader)));
+        Pageable pageable = PageRequest.of(page, size, Sort.by("createdDate").descending());
+
+        Page<BookTransactionHistory> borrowedBooks = transactionHistoryRepository.findAllBorrowedBooks(pageable, obtainedUser.getId());
+
+        List<String> borrowedBooksIds = borrowedBooks
+                .stream()
+                .map(BookTransactionHistory::getBookId)
+                .toList();
+
+       return bookRepository.findByIdIn(pageable, borrowedBooksIds);
     }
 }
