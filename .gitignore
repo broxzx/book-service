@@ -4,4 +4,5 @@
 *.iml
 *.ipr
 
-./node_modules
+./node_modules/
+./book-network-ui/node_modules/
